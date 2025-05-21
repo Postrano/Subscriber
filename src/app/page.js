@@ -13,9 +13,9 @@ export default function Home() {
           <div className="flex items-center justify-center w-full md:w-auto space-x-4">
             <div className="w-24 md:w-64 border-t border-black"></div>
             <img
-              src="/images/ineo2.png"
+              src="/images/i-neo.jpg"
               alt="i-NEO Logo"
-              className="h-20 border border-black mx-4 rounded-full"
+              className="h-20 border border-black mx-4 "
             />
             <div className="w-24 md:w-64 border-t border-black"></div>
           </div>
@@ -220,8 +220,9 @@ export default function Home() {
 
       {/* Footer */}
       <div className="w-full bg-black text-white py-4 flex flex-col md:flex-row justify-center gap-2 md:gap-10 items-center border-t text-sm px-4 text-center">
-        <span>adminINEO@gmail.com</span>
-        <span>🌐 https://inspirenextglobal.com</span>
+         <span>Contact Us:</span>
+        <span>inspireneo2025@gmail.com </span>
+        {/* <span>🌐 https://inspirenextglobal.com</span> */}
       </div>
     </div>
   );
