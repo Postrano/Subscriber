@@ -253,8 +253,9 @@ if (paymentMethod === "bank") {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-white py-10 px-4 sm:px-6 lg:px-8 text-black">
-      <div className="max-w-3xl mx-auto p-6 sm:p-8 bg-white border border-gray-200 rounded-2xl shadow-md">
+   <div className="min-h-screen bg-gradient-to-br from-[#cce4f6] to-[#ffffff] py-10 px-4 sm:px-6 lg:px-8 text-black">
+  <div className="max-w-3xl mx-auto p-6 sm:p-8 bg-[#ffffff] border border-gray-200 rounded-2xl shadow-md">
+
         {/* Logo */}
         <div className="flex items-center justify-center mb-6 space-x-4">
           <div className="flex-grow border-t border-gray-300"></div>
