@@ -256,15 +256,16 @@ if (paymentMethod === "bank") {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#cce4f6] to-[#ffffff] py-10 px-4 sm:px-6 lg:px-8 text-black">
+    <div className="min-h-screen bg-gradient-to-br from-[#b4c9da] to-[#73c4fd] py-10 px-4 sm:px-6 lg:px-8 text-black">
   <div className="max-w-3xl mx-auto p-6 sm:p-8 bg-[#ffffff] border border-gray-200 rounded-2xl shadow-md">
 
         {/* Logo */}
-        <div className="flex items-center justify-center mb-6 space-x-4">
-          <div className="flex-grow border-t border-gray-300"></div>
-          <img src="/images/i-neo.jpg" alt="Logo" className="h-16 sm:h-20" />
-          <div className="flex-grow border-t border-gray-300"></div>
-        </div>
+      <div className="flex items-center justify-center mb-6 space-x-4">
+  <div className="flex-grow border-t border-[#d1d5db]"></div>
+  <img src="/images/i-neo.jpg" alt="Logo" className="h-16 sm:h-20" />
+  <div className="flex-grow border-t border-[#d1d5db]"></div>
+</div>
+
 
         {/* Back Button */}
         {!paymentSubmitted && (
@@ -273,7 +274,7 @@ if (paymentMethod === "bank") {
               onClick={() =>
                 step === 1 ? (window.location.href = "/") : setStep(step - 1)
               }
-              className="text-blue-600 hover:underline text-sm font-medium"
+              className="text-[#3b82f6] hover:underline text-sm font-medium"
             >
               &larr; Back
             </button>
@@ -283,7 +284,7 @@ if (paymentMethod === "bank") {
         {/* Payment Status */}
         {paymentSubmitted ? (
           <div className="text-center py-10">
-            <h2 className="text-2xl font-semibold mb-4 text-green-600">
+            <h2 className="text-2xl font-semibold mb-4 text-[#22c55e]">
               Payment Submitted Successfully!
             </h2>
             <p>You will receive an email confirming your payment shortly.</p>
@@ -293,7 +294,7 @@ if (paymentMethod === "bank") {
             {/* Render Step 1 (Upload Details) */}
             {step === 1 && (
               <>
-                <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
+                <h2 className="text-2xl font-semibold mb-6 text-center text-[#1f2937]">
                   Upload Company & User Details
                 </h2>
 
@@ -318,7 +319,7 @@ if (paymentMethod === "bank") {
                     <div key={name}>
                       <label
                         htmlFor={name}
-                        className="block text-sm font-medium text-gray-700 mb-1"
+                        className="block text-sm font-medium text-[#1f2937] mb-1"
                       >
                         {label}
                       </label>
@@ -328,7 +329,7 @@ if (paymentMethod === "bank") {
                         name={name}
                         value={formData[name]}
                         onChange={handleChange}
-                        className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        className="w-full border border-[#d1d5db] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#60a5fa]"
                         required
                       />
                     </div>
@@ -337,7 +338,7 @@ if (paymentMethod === "bank") {
 
                 {/* CSV Upload */}
                 <div className="mt-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-[#1f2937]  mb-1">
                     Upload User Information (CSV)
                   </label>
                   <input
@@ -345,23 +346,23 @@ if (paymentMethod === "bank") {
                     name="userCsvFile"
                     onChange={handleFileChange}
                     accept=".csv"
-                    className="block w-full border border-gray-300 rounded-lg px-4 py-2 text-sm"
+                    className="block w-full border border-[#d1d5db]  rounded-lg px-4 py-2 text-sm"
                     required
                   />
 
                    {/* File name preview */}
-                  <p className="text-sm mt-1 text-gray-600">
+                  <p className="text-sm mt-1 text-[#1f2937]">
                     {formData.userCsvFile?.name && `Selected file: ${formData.userCsvFile.name}`}
                   </p>
 
-                  <p className="text-sm text-gray-500 mt-1">
+                  <p className="text-sm text-[#6B7280] mt-1">
                     Format: <strong>fullname, email, department, position, plan</strong>
                     <br />
                     Minimum 5 users required.
                     <a
                       href="/files/USERS INFORMATION(Sheet1).csv"
                       download
-                      className="ml-2 text-blue-500 underline"
+                      className="ml-2 text-[#3B82F6] underline"
                     >
                       Download template
                     </a>
@@ -377,7 +378,7 @@ if (paymentMethod === "bank") {
 
                     return (
                       <div key={field}>
-                        <label htmlFor={field} className="block text-sm font-medium text-gray-700 mb-1">
+                        <label htmlFor={field} className="block text-sm font-medium text-[#374151] mb-1">
                           {labelText}
                         </label>
                         <input
@@ -385,7 +386,7 @@ if (paymentMethod === "bank") {
                           id={field}
                           name={field}
                           onChange={handleFileChange}
-                          className="block w-full border border-gray-300 rounded-lg px-4 py-2 text-sm"
+                          className="block w-full border border-[#D1D5DB] rounded-lg px-4 py-2 text-sm"
                           required
                         />
                       </div>
@@ -402,7 +403,7 @@ if (paymentMethod === "bank") {
                         ? setStep(2)
                         : alert("Please complete all fields and upload required files.")
                     }
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition-all"
+                    className="bg-[#2563EB] hover:bg-[#1D4ED8] text-[#FFFFFF] font-semibold px-6 py-2 rounded-lg shadow transition-all"
                   >
                     Continue to Payment
                   </button>
@@ -423,7 +424,7 @@ if (paymentMethod === "bank") {
       </button> */}
       <button
         onClick={() => handlePaymentSelect("bank")}
-        className="bg-green-500 text-white px-6 py-3 rounded shadow-md hover:bg-green-600"
+        className="bg-[#22C55E] text-[#FFFFFF] px-6 py-3 rounded shadow-md hover:bg-[#16A34A]"
       >
         Pay via Bank
       </button>
@@ -441,15 +442,15 @@ if (paymentMethod === "bank") {
       <div className="mb-4 space-y-1 text-center">
         <p className="font-medium">
           Basic Users:{" "}
-          <span className="text-blue-600 font-semibold">{formData.basicUsers}</span>
+          <span className="text-[#2563EB] font-semibold">{formData.basicUsers}</span>
         </p>
         <p className="font-medium">
           Premium Users:{" "}
-          <span className="text-purple-600 font-semibold">{formData.premiumUsers}</span>
+          <span className="text-[#7C3AED] font-semibold">{formData.premiumUsers}</span>
         </p>
         <p className="mb-4 font-medium">
           Total Payment:{" "}
-          <span className="text-green-700 font-bold">
+          <span className="text-[#15803D] font-bold">
             ₱{totalAmount.toLocaleString()}
           </span>
         </p>
@@ -469,7 +470,7 @@ if (paymentMethod === "bank") {
 
           <button
             onClick={handleSubmitPayment}
-            className="mt-4 w-full bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+            className="mt-4 w-full bg-[#7C3AED] text-[#fffff] px-4 py-2 rounded hover:bg-[#5B21B6]"
           >
             Submit GCash Payment
           </button>
@@ -481,7 +482,7 @@ if (paymentMethod === "bank") {
       <div className="space-y-4">
         <h3 className="text-lg font-semibold mb-2 text-center">Bank Payment Details</h3>
 
-        <div className="border p-4 rounded bg-gray-50">
+        <div className="border p-4 rounded bg-[#F9FAFB]">
           <p><span className="font-semibold">BPI:</span> 0061-0008-83</p>
           <p><span className="font-semibold">Security Bank:</span> 00007-0416-901</p>
           <p><span className="font-semibold">Union Bank:</span> 00-156-0012-010</p>
@@ -494,14 +495,14 @@ if (paymentMethod === "bank") {
             name="paymentProof"
             accept="image/*,application/pdf"
             onChange={handleFileChange}
-            className="mt-1 w-full  border border-gray-300 rounded-lg"
+            className="mt-1 w-full  border border-[#D1D5DB] rounded-lg"
             required
           />
         </div>
 
         <button
           onClick={handleSubmitPayment}
-          className={`mt-6 w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 ${
+          className={`mt-6 w-full bg-[#2563EB] text-white px-4 py-2 rounded hover:bg-[#1D4ED8] ${
             !validateStep3() ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={!validateStep3()}
@@ -510,11 +511,11 @@ if (paymentMethod === "bank") {
         </button>
         {isLoading && (
   <div className="flex justify-center items-center py-4">
-    <svg className="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <svg className="animate-spin h-6 w-6 text-[#2563EB]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
     </svg>
-    <span className="ml-2 text-blue-600 font-medium">Processing...</span>
+    <span className="ml-2 text-[#2563EB] font-medium">Processing...</span>
   </div>
 )}
 
