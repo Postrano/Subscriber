@@ -268,19 +268,7 @@ if (paymentMethod === "bank") {
 </div>
 
 
-        {/* Back Button */}
-        {!paymentSubmitted && (
-          <div className="absolute top-4 right-4">
-            <button
-              onClick={() =>
-                step === 1 ? (window.location.href = "/") : setStep(step - 1)
-              }
-              className="text-[#ffff] hover:underline text-sm font-medium"
-            >
-              &larr; Back
-            </button>
-          </div>
-        )}
+     
 
         {/* Payment Status */}
         {paymentSubmitted ? (
@@ -295,9 +283,14 @@ if (paymentMethod === "bank") {
             {/* Render Step 1 (Upload Details) */}
             {step === 1 && (
               <>
+
+              
                 <h2 className="text-2xl font-semibold mb-6 text-center text-[#1f2937]">
                   Upload Company & User Details
                 </h2>
+{/* Back Button */}
+
+
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
@@ -395,7 +388,16 @@ if (paymentMethod === "bank") {
                   })}
                 </div>
 
-
+{/* Back Button */}
+<div className="mt-6 flex justify-start">
+  <button
+    type="button"
+    onClick={() => (step === 1 ? (window.location.href = "/") : setStep(step - 1))}
+    className="text-[#2563eb] underline text-sm font-medium"
+  >
+    &larr; Back
+  </button>
+</div>
                 {/* Continue Button */}
                 <div className="mt-8 flex justify-center">
                   <button
@@ -414,8 +416,12 @@ if (paymentMethod === "bank") {
 
 
             {step === 2 && (
+              
+              <div>
   <div className="flex flex-col items-center justify-center ">
+    
     <h2 className="text-xl font-bold mb-4">Select Payment Method</h2>
+    
     <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
       {/* <button
         onClick={() => handlePaymentSelect("gcash")}
@@ -423,6 +429,8 @@ if (paymentMethod === "bank") {
       >
         Pay via GCash
       </button> */}
+      {/* Back Button */}
+
       <button
         onClick={() => handlePaymentSelect("bank")}
         className="bg-[#22C55E] text-[#FFFFFF] px-6 py-3 rounded shadow-md hover:bg-[#16A34A]"
@@ -431,10 +439,23 @@ if (paymentMethod === "bank") {
       </button>
     </div>
   </div>
+  {/* Back Button */}
+<div className="mt-6 flex justify-start">
+  <button
+    type="button"
+    onClick={() => (step === 1 ? (window.location.href = "/") : setStep(step - 1))}
+    className="text-[#2563eb] underline text-sm font-medium"
+  >
+    &larr; Back
+  </button>
+</div>
+  </div>
 )}
 
 
       {step === 3 && (
+        <div>
+          
   <div className="flex flex-col items-center justify-center  px-4">
     <div className="w-full max-w-md">
       <h2 className="text-xl font-bold mb-4 text-center">Payment Details</h2>
@@ -524,7 +545,18 @@ if (paymentMethod === "bank") {
     )}
 
     </div>
+    
   </div>
+<div className="mt-6 flex justify-start">
+  <button
+    type="button"
+    onClick={() => (step === 1 ? (window.location.href = "/") : setStep(step - 1))}
+    className="text-[#2563eb] underline text-sm font-medium"
+  >
+    &larr; Back
+  </button>
+</div>
+   </div>
 )}
 
        </>
