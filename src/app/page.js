@@ -37,53 +37,53 @@ export default function Home() {
           <ul className="space-y-2 mb-6">
 
                 <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Facility Reservation
+                      <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Facility Reservation
                   </li>
 
 
                 <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Visitors Management
+                      <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Visitors Management
                   </li>
           
                 
                   <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Document Management
+                      <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Document Management
                   </li>
 
 
                   <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Project Management
+                      <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Project Management
                   </li>
 
                   <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Inventory
+                      <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Inventory
                   </li>
               
                     <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" /> Cabinet
+                    <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Cabinet
                    </li>
 
                     <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" /> Safety Confirmation
+                    <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Safety Confirmation
                     </li>
 
                 
                     <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" /> 1GB per account
+                    <Check className="text-[#22c55e] w-4 h-4 mr-2" /> 1GB per account
                     </li>
 
                     <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" /> Cloud status (shareable)
+                    <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Cloud status (shareable)
                     </li>
 
                     <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" /> Small to medium Enterprise
+                    <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Small to medium Enterprise
                     </li>
                    
           </ul>
           <button
             onClick={() => router.push('/basic')}
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+            className="w-full bg-[#3b82f6] text-white py-2 rounded hover:bg-[#2563eb]">
             SUBSCRIBE
           </button>
         </div>
@@ -98,57 +98,53 @@ export default function Home() {
              
 
                <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Facility Reservation
+                  <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Facility Reservation
               </li>
 
 
                <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Visitors Management
+                  <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Visitors Management
               </li>
 
                <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Workflow
+                  <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Workflow
               </li>
 
                <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Circulations/Report
+                  <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Circulations/Report
               </li>
-
-
-             
-
 
               <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Project Management
+                  <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Project Management
               </li>
 
 
                 <li  className="flex items-center text-sm">
-                <Check className="text-green-500 w-4 h-4 mr-2" /> Safety Confirmation
+                <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Safety Confirmation
                 </li>
 
 
                 <li  className="flex items-center text-sm">
-                <Check className="text-green-500 w-4 h-4 mr-2" /> AppSuite
+                <Check className="text-[#22c55e] w-4 h-4 mr-2" /> AppSuite
                 </li>
 
 
                 <li  className="flex items-center text-sm">
-                <Check className="text-green-500 w-4 h-4 mr-2" /> 1GB per account
+                <Check className="text-[#22c55e] w-4 h-4 mr-2" /> 1GB per account
                 </li>
 
                 <li  className="flex items-center text-sm">
-                <Check className="text-green-500 w-4 h-4 mr-2" /> Cloud status (shareable)
+                <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Cloud status (shareable)
                 </li>
 
                 <li  className="flex items-center text-sm">
-                <Check className="text-green-500 w-4 h-4 mr-2" /> Small to Large Enterprise
+                <Check className="text-[#22c55e] w-4 h-4 mr-2" /> Small to Large Enterprise
                 </li>
 
             </ul>
           <button
             onClick={() => router.push('/premium')}
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+            className="w-full bg-[#3b82f6] text-white py-2 rounded hover:bg-[#2563eb]">
             SUBSCRIBE
           </button>
         </div>
