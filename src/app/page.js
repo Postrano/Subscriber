@@ -30,7 +30,8 @@ export default function Home() {
       {/* Plans */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 py-10 px-4 w-full">
         {/* Basic Plan */}
-        <div className="bg-blue-100 rounded-2xl p-6 w-full max-w-sm shadow text-black">
+      <div className="bg-[#cce4f6] rounded-2xl p-6 w-full max-w-sm shadow text-black">
+
           <h2 className="text-center font-bold text-lg">BASIC PLAN</h2>
           <p className="text-center font-semibold text-xl mt-1 mb-4">₱200</p>
           <ul className="space-y-2 mb-6">
@@ -88,7 +89,8 @@ export default function Home() {
         </div>
 
         {/* Premium Plan */}
-        <div className="bg-blue-100 rounded-2xl p-6 w-full max-w-sm shadow text-black">
+      <div className="bg-[#cce4f6] rounded-2xl p-6 w-full max-w-sm shadow text-black">
+
           <h2 className="text-center font-bold text-lg">PREMIUM PLAN</h2>
           <p className="text-center font-semibold text-xl mt-1 mb-4">₱360</p>
           <ul className="space-y-2 mb-6">
