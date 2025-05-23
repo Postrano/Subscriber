@@ -256,7 +256,8 @@ if (paymentMethod === "bank") {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#b4c9da] to-[#73c4fd] py-10 px-4 sm:px-6 lg:px-8 text-black">
+    <div className="min-h-screen bg-gradient-to-br from-[#b4c9da] to-[#73c4fd] py-10 px-4 sm:px-6 lg:px-8 text-black bg-cover bg-center" style={{ backgroundImage: "url('/images/building3.jpg')" }}>
+      
   <div className="max-w-3xl mx-auto p-6 sm:p-8 bg-[#ffffff] border border-gray-200 rounded-2xl shadow-md">
 
         {/* Logo */}
@@ -274,7 +275,7 @@ if (paymentMethod === "bank") {
               onClick={() =>
                 step === 1 ? (window.location.href = "/") : setStep(step - 1)
               }
-              className="text-[#3b82f6] hover:underline text-sm font-medium"
+              className="text-[#ffff] hover:underline text-sm font-medium"
             >
               &larr; Back
             </button>
