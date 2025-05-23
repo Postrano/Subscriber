@@ -85,10 +85,7 @@ const processCSVAndSaveUsers = async (file, subscriptionId) => {
       complete: async function (results) {
         const users = results.data;
 
-        if (users.length < 5) {
-          alert("CSV must contain at least 5 users.");
-          return reject("Insufficient users.");
-        }
+        
 
         try {
           for (const user of users) {
@@ -151,8 +148,6 @@ const processCSVAndSaveUsers = async (file, subscriptionId) => {
   return false;
 };
 
-
-
   // Payment selection and submission
   const handlePaymentSelect = (method) => {
     setPaymentMethod(method);
@@ -160,7 +155,7 @@ const processCSVAndSaveUsers = async (file, subscriptionId) => {
   };
 
 const handleSubmitPayment = async () => {
-    setIsLoading(true); // Start loading
+  setIsLoading(true); // Start loading
   try {
     // Upload files
     const proofOfBusinessUrl = await uploadAndGetUrl(formData.proofOfBusiness, "proofs");
@@ -252,7 +247,7 @@ if (paymentMethod === "bank") {
       )
       .then((result) => {
         console.log("Email sent successfully!", result.text);
-        alert("Payment confirmation email sent!");
+        // alert("Payment confirmation email sent!");
       })
       .catch((error) => {
         console.error("Error sending email:", error);
@@ -281,15 +276,6 @@ if (paymentMethod === "bank") {
             >
               &larr; Back
             </button>
-            {isLoading && (
-  <div className="flex justify-center items-center py-4">
-    <svg className="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-    </svg>
-    <span className="ml-2 text-blue-600 font-medium">Processing...</span>
-  </div>
-)}
           </div>
         )}
 
@@ -419,15 +405,6 @@ if (paymentMethod === "bank") {
                   >
                     Continue to Payment
                   </button>
-                  {isLoading && (
-  <div className="flex justify-center items-center py-4">
-    <svg className="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-    </svg>
-    <span className="ml-2 text-blue-600 font-medium">Processing...</span>
-  </div>
-)}
                 </div>
   </>
 )}
@@ -449,15 +426,6 @@ if (paymentMethod === "bank") {
       >
         Pay via Bank
       </button>
-      {isLoading && (
-  <div className="flex justify-center items-center py-4">
-    <svg className="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-    </svg>
-    <span className="ml-2 text-blue-600 font-medium">Processing...</span>
-  </div>
-)}
     </div>
   </div>
 )}
@@ -487,7 +455,7 @@ if (paymentMethod === "bank") {
       </div>
 
       {/* GCash Fields */}
-      {paymentMethod === "gcash" && (
+    {paymentMethod === "gcash" && (
         <div className="mb-6">
           <label className="block mb-1 font-medium">Upload GCash Receipt</label>
          <input
@@ -497,15 +465,6 @@ if (paymentMethod === "bank") {
           className="w-full border px-3 py-2 rounded"
           required={paymentMethod === "gcash"}  // only required if paymentMethod is gcash
         />
-        {isLoading && (
-  <div className="flex justify-center items-center py-4">
-    <svg className="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-    </svg>
-    <span className="ml-2 text-blue-600 font-medium">Processing...</span>
-  </div>
-)}
 
           <button
             onClick={handleSubmitPayment}
@@ -518,28 +477,37 @@ if (paymentMethod === "bank") {
 
       {/* Bank Fields */}
     {paymentMethod === "bank" && (
-  <div className="space-y-4">
-    <h3 className="text-lg font-semibold mb-2 text-center">Bank Payment Details</h3>
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold mb-2 text-center">Bank Payment Details</h3>
 
-    <div className="border p-4 rounded bg-gray-50">
-      <p><span className="font-semibold">BPI:</span> 0061-0008-83</p>
-      <p><span className="font-semibold">Security Bank:</span> 00007-0416-901</p>
-      <p><span className="font-semibold">Union Bank:</span> 00-156-0012-010</p>
-    </div>
+        <div className="border p-4 rounded bg-gray-50">
+          <p><span className="font-semibold">BPI:</span> 0061-0008-83</p>
+          <p><span className="font-semibold">Security Bank:</span> 00007-0416-901</p>
+          <p><span className="font-semibold">Union Bank:</span> 00-156-0012-010</p>
+        </div>
 
-    <div>
-      <label className="block font-medium">Upload Proof of Payment</label>
-      <input
-        type="file"
-        name="paymentProof"
-        accept="image/*,application/pdf"
-        onChange={handleFileChange}
-        className="mt-1 w-full  border border-gray-300 rounded-lg"
-        required
-      />
-    </div>
-   
-    {isLoading && (
+        <div>
+          <label className="block font-medium">Upload Proof of Payment</label>
+          <input
+            type="file"
+            name="paymentProof"
+            accept="image/*,application/pdf"
+            onChange={handleFileChange}
+            className="mt-1 w-full  border border-gray-300 rounded-lg"
+            required
+          />
+        </div>
+
+        <button
+          onClick={handleSubmitPayment}
+          className={`mt-6 w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 ${
+            !validateStep3() ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          disabled={!validateStep3()}
+        >
+          Submit Bank Payment
+        </button>
+        {isLoading && (
   <div className="flex justify-center items-center py-4">
     <svg className="animate-spin h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -549,17 +517,8 @@ if (paymentMethod === "bank") {
   </div>
 )}
 
-    <button
-      onClick={handleSubmitPayment}
-      className={`mt-6 w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 ${
-        !validateStep3() ? "opacity-50 cursor-not-allowed" : ""
-      }`}
-      disabled={!validateStep3()}
-    >
-      Submit Bank Payment
-    </button>
-  </div>
-)}
+      </div>
+    )}
 
     </div>
   </div>
