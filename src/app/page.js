@@ -3,19 +3,24 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import { useRouter } from 'next/navigation';
 
+
 export default function Home() {
   const router = useRouter();
+ 
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-between bg-gradient-to-br from-blue-100 to-white bg-cover bg-center" style={{ backgroundImage: "url('/images/building3.jpg')" }}>
+      
       {/* Header */}
-      <div className="w-full bg-gradient-to-br from-blue-100 to-white">
+     <div className="w-full bg-gradient-to-br from-blue-100/100 to-white/5">
+
         <div className="flex flex-col md:flex-row px-6 md:px-10 py-6 items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
           <div className="flex items-center justify-center w-full md:w-auto space-x-4">
             <div className="w-24 md:w-64 border-t border-black"></div>
             <img
-              src="/images/i-neo.jpg"
+              src="/images/nb.png"
               alt="i-NEO Logo"
-              className="h-20 border border-black mx-4 "
+              className="h-18 border border-black mx-4 "
             />
             <div className="w-24 md:w-64 border-t border-black"></div>
           </div>
@@ -219,7 +224,8 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="w-full bg-black text-white py-4 flex flex-col md:flex-row justify-center gap-2 md:gap-10 items-center border-t text-sm px-4 text-center">
+     <div className="w-full bg-transparent text-white py-4 flex flex-col md:flex-row justify-center gap-2 md:gap-10 items-center border-t text-sm px-4 text-center">
+
          <span>Contact Us:</span>
         <span>inspireneo2025@gmail.com </span>
         {/* <span>🌐 https://inspirenextglobal.com</span> */}
