@@ -35,18 +35,6 @@ export default function Home() {
           <p className="text-center font-semibold text-xl mt-1 mb-4">₱200</p>
           <ul className="space-y-2 mb-6">
 
-                {/* <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" />Schedule
-                </li>
-                
-                <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" />Webmail
-                </li>
-                
-                <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Timecard
-                  </li> */}
-
                 <li  className="flex items-center text-sm">
                       <Check className="text-green-500 w-4 h-4 mr-2" /> Facility Reservation
                   </li>
@@ -55,23 +43,6 @@ export default function Home() {
                 <li  className="flex items-center text-sm">
                       <Check className="text-green-500 w-4 h-4 mr-2" /> Visitors Management
                   </li>
-
-                {/* <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Workflow
-                  </li> */}
-
-                {/* <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Circulations/Report
-                  </li> */}
-
-
-                {/* <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Address Book
-                  </li>
-
-                  <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" />Time Card
-                    </li> */}
           
                 
                   <li  className="flex items-center text-sm">
@@ -86,19 +57,10 @@ export default function Home() {
                   <li  className="flex items-center text-sm">
                       <Check className="text-green-500 w-4 h-4 mr-2" /> Inventory
                   </li>
-
-
-                  {/* <li  className="flex items-center text-sm">
-                      <Check className="text-green-500 w-4 h-4 mr-2" /> Reminder
-                  </li> */}
               
                     <li  className="flex items-center text-sm">
                     <Check className="text-green-500 w-4 h-4 mr-2" /> Cabinet
                    </li>
-
-                    {/* <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" /> User Directory
-                    </li> */}
 
                     <li  className="flex items-center text-sm">
                     <Check className="text-green-500 w-4 h-4 mr-2" /> Safety Confirmation
@@ -131,17 +93,7 @@ export default function Home() {
           <p className="text-center font-semibold text-xl mt-1 mb-4">₱360</p>
           <ul className="space-y-2 mb-6">
 
-              {/* <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" />Schedule
-             </li>
-
-              <li  className="flex items-center text-sm">
-                    <Check className="text-green-500 w-4 h-4 mr-2" />Webmail
-              </li>
-
-              <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Timecard
-              </li> */}
+             
 
                <li  className="flex items-center text-sm">
                   <Check className="text-green-500 w-4 h-4 mr-2" /> Facility Reservation
@@ -161,36 +113,13 @@ export default function Home() {
               </li>
 
 
-               {/* <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Address Book
-              </li> */}
-
-
-              {/* <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Document Management
-              </li> */}
+             
 
 
               <li  className="flex items-center text-sm">
                   <Check className="text-green-500 w-4 h-4 mr-2" /> Project Management
               </li>
-{/* 
-              <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Inventory
-              </li>
 
-
-              <li  className="flex items-center text-sm">
-                  <Check className="text-green-500 w-4 h-4 mr-2" /> Reminder
-              </li>
-
-                <li  className="flex items-center text-sm">
-                <Check className="text-green-500 w-4 h-4 mr-2" /> Cabinet
-                </li> */}
-
-                {/* <li  className="flex items-center text-sm">
-                <Check className="text-green-500 w-4 h-4 mr-2" /> User Directory
-                </li> */}
 
                 <li  className="flex items-center text-sm">
                 <Check className="text-green-500 w-4 h-4 mr-2" /> Safety Confirmation
